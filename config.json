@@ -1,0 +1,22 @@
+{
+  "project": "Training Day 1",
+  "server": {
+    "port": 8000
+  },
+  "export": {
+    "path": "export",
+    "assetPrefix": "training-day-1"
+  },
+  "compass": {
+    "debugInfo": false,
+    "extensions": [
+      "toolkit",
+      "sassy-buttons",
+      "modular-scale",
+      "compass-normalize"
+    ]
+  },
+  "git": {
+    "defaultCommit": "Production build and commit"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "training-day-1",
+  "version": "0.0.0",
+  "dependencies": {
+    "formalize": "git://github.com/nathansmith/formalize",
+    "modernizr": "~2.6.2",
+    "jquery": "~2.0.0"
+  },
+  "devDependencies": {}
+}

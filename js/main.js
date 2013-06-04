@@ -1,0 +1,1 @@
+console.log('Training Day 1');

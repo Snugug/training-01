@@ -1,0 +1,20 @@
+////////////////////////
+// Mixins Partials
+//
+// All of your mixins should go in this file.
+////////////////////////
+
+
+@mixin box($color, $side: 'all') {
+  @extend %clearfix;
+
+  background-color: $color;
+  color: invert($color);
+
+  @if $side == 'all' {
+    border: border(invert($color));
+  }
+  @else {
+    border-#{$side}: border(invert($color));
+  }
+}
