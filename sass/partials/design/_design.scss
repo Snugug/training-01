@@ -10,3 +10,49 @@
 h1 {
   @include box($blue);
 }
+
+
+$icons: 'apple', 'binoculars', 'bug', 'grin';
+$menu: 'menu';
+@include sprite-map-generator($menu);
+
+$font-icons: 'headphones', 'pacman', 'quill', 'drupal';
+
+nav a {
+  display: inline-block;
+
+  margin-right: 1em;
+  font-size: 2em;
+  text-decoration: none;
+
+  color: $blue;
+
+  @include single-transition(color, .3s);
+
+  &:hover,
+  &:hover:before {
+    color: $green;
+  }
+
+  &:before {
+    height: 1em;
+    width: 1em;
+    font-size: 1em;
+    padding-right: .5em;
+
+    font-family: 'icomoon';
+    @extend %enable-ligatures;
+
+    @include single-transition(color, .3s);
+  }
+
+  $length: length($icons);
+  @for $i from 1 through $length {
+    &:nth-of-type(#{$i}) {
+      // @include replace-text-pe($menu, nth($icons, $i));
+      &:before {
+        content: '#{nth($font-icons, $i)}';
+      }
+    }
+  }
+}

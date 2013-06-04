@@ -143,6 +143,7 @@ module.exports = function (grunt) {
       options: {
         sassDir: sassDir,
         require: extensions,
+        relativeAssets: true,
         importPath: componentsDir,
         debugInfo: debugInfo,
         bundleExec: true
@@ -353,10 +354,10 @@ module.exports = function (grunt) {
       grunt.task.run(['exec:commit:' + commit]);
     }
 
-    
+
   });
 
-  
+
 
   //////////////////////////////
   // Export Tasks
